@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Your AD-Blocker Resist",
+    "version": "1.0",
+    "description": "Detect AD-Blocker blcok modal",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "src/script/background.js"
+      },
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "action": {
+        "default_icon": {
+            "128": "src/icons/icon128.png"
+        },
+        "default_title": "Timer Extension Action Title"
+    },
+    "icons": {
+        "128": "src/icons/icon128.png"
+      }
+}
